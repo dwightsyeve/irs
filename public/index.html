@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <style>
+    <title>IRS Official</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    s    <style>
         * {
             margin: 0;
             padding: 0;
@@ -353,7 +357,7 @@
         submitBtn.disabled = true;
         
         // Send data to backend
-        fetch('http://localhost:3000/api/submit-form', {
+        fetch('/api/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
