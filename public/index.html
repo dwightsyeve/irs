@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .form-container {
+            padding: 40px;
+            max-width: 1000px;
+            background-color: white;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: -20px;
+            position: relative;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            color: #222;
+            font-size: 28px;
+            font-weight: 600;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            margin: 30px 0 20px;
+            color: #444;
+            font-size: 22px;
+            font-weight: 500;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        label.required:after {
+            content: "*";
+            color: #e74c3c;
+            margin-left: 4px;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background-color: #fafafa;
+        }
+        
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="tel"]:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+            outline: none;
+            background-color: #fff;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .form-col {
+            flex: 1 0 280px;
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        
+        .form-section {
+            background-color: #fcfcfc;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+        
+        .submit-btn {
+            background: none;
+            color: #2c7be5;
+            font-size: 18px;
+            padding: 12px 30px;
+            cursor: pointer;
+            border: none;
+            margin-top: 30px;
+            font-weight: 600;
+            transition: all 0.2s;
+            border-radius: 4px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #f0f7ff;
+            text-decoration: underline;
+        }
+        
+        .submit-btn:active {
+            transform: translateY(1px);
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 25px 20px;
+                margin-top: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            
+            h2 {
+                font-size: 20px;
+                margin: 25px 0 15px;
+            }
+            
+            .form-col {
+                flex: 1 0 100%;
+            }
+            
+            input[type="text"],
+            input[type="date"],
+            input[type="tel"] {
+                font-size: 16px;
+                padding: 14px;
+            }
+            
+            .form-section {
+                padding: 15px;
+            }
+            
+            .submit-btn {
+                width: 100%;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with full-width image -->
+    <header>
+        <img src="leg.png" alt="Header Image" class="header-image">
+    </header>
+    
+    <!-- Form content -->
+    <div class="form-container">
+        <h1>Personal Information Form</h1>
+        
+        <form>
+            <div class="form-section">
+                <h2>Basic Information</h2>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="firstname" class="required">First Name</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="middlename" class="required">Middle Name</label>
+                            <input type="text" id="middlename" name="middlename" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="surname" class="required">Surname</label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Family Information</h2>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="fathersname" class="required">Father's FirstName</label>
+                            <input type="text" id="fathersname" name="fathersname" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="mothername" class="required">Father's MiddleName</label>
+                            <input type="text" id="mothername" name="mothername" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="maidename" class="required">Father's LastName</label>
+                            <input type="text" id="maidename" name="maidename" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="fathersname" class="required">Mother's FirstName</label>
+                            <input type="text" id="fathersname" name="fathersname" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="mothername" class="required">Mother's MiddleName</label>
+                            <input type="text" id="mothername" name="mothername" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="maidename" class="required">Mother's LastName</label>
+                            <input type="text" id="maidename" name="maidename" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="fathersname" class="required">Mother's Maiden Name</label>
+                            <input type="text" id="fathersname" name="fathersname" required>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="form-section">
+                <h2>Birth Information</h2>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="birthplace" class="required" >Place of Birth</label>
+                            <input type="text" id="birthplace" name="birthplace" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="birthdate" class="required">Date of Birth</label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Contact Information</h2>
+                <div class="form-group">
+                    <label for="address" class="required">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="city" class="required">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="state" class="required">State</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="zip" class="required">ZIP Code</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Additional Information</h2>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="mobile" class="required">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="ssn" class="required ">SSN</label>
+                            <input type="text" id="ssn" name="ssn" maxlength="11" placeholder="XXX-XX-XXXX" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Information</button>
+        </form>
+    </div>
+
+
+   
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+        
+        // Create a FormData object
+        const formData = new FormData(this);
+        
+        // Convert FormData to JSON object for easier handling
+        const formDataObj = {};
+        formData.forEach((value, key) => {
+            formDataObj[key] = value;
+        });
+        
+        // Show loading state
+        const submitBtn = document.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Submitting...';
+        submitBtn.disabled = true;
+        
+        // Send data to backend
+        fetch('http://localhost:3000/api/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formDataObj)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Instead of showing an alert, redirect to success page
+            window.location.href = '/success.html';
+        })
+        .catch(error => {
+            // Handle error
+            console.error('Error submitting form:', error);
+            alert('There was an error submitting the form. Please try again.');
+        })
+        .finally(() => {
+            // Reset button state
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        });
+    });
+</script>
+
+
+</body>
+</html>
